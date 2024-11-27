@@ -13,14 +13,14 @@ async function simpleLS(targetFolder) {
     console.error(`No such file or directory: ${targetFolder}`);
     process.exit(1);
   }
-  // console.log(files); ya muestra los archivos
+  // console.log(files); show files
 
   //first way: sequentially
-  const fileStats = await getStatsSeq(files, targetFolder);
+  // const fileStats = await getStatsSeq(files, targetFolder);
 
   //second way: using promises
   
-  // const fileStats = await getStatsPromises(targetFolder, files);
+  const fileStats = await getStatsPromises(targetFolder, files);
   console.table(fileStats);
 }
 
